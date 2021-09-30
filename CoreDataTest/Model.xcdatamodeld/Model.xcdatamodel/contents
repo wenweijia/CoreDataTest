@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="sid" optional="YES" attributeType="String"/>
+        <relationship name="teachBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teacher" inverseName="teach" inverseEntity="Teacher"/>
+    </entity>
+    <entity name="Teacher" representedClassName="Teacher" syncable="YES" codeGenerationType="class">
+        <attribute name="job" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="teach" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="teachBy" inverseEntity="Student"/>
+    </entity>
+    <elements>
+        <element name="Student" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Teacher" positionX="155.1114501953125" positionY="129.7033081054688" width="128" height="88"/>
+    </elements>
+</model>
